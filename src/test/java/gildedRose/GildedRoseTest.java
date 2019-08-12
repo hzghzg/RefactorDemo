@@ -68,4 +68,13 @@ public class GildedRoseTest {
         assertEquals(-2,item.sellIn);
         assertEquals(0, item.quality);
     }
+    @Test
+    public void should_return_1_and_0_when_updateQuality_given_small_cake_its_sellIn_is_2_quality_is_0(){
+        Item item = new Item("small cake", 2, 0);
+        Item[] items = {item};
+        GildedRose gildedRose = new GildedRose(items);
+        gildedRose.updateQuality();
+        assertEquals(1,item.sellIn);
+        assertEquals(0, item.quality);
+    }
 }
