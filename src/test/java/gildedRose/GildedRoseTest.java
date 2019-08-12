@@ -159,12 +159,12 @@ public class GildedRoseTest {
         assertEquals(50, item.quality);
     }
     @Test
-    public void should_return_9_and_50_when_updateQuality_given_Backstage_its_sellIn_is_10_quality_is_49(){
-        Item item = new Item("Backstage passes to a TAFKAL80ETC concert", 10, 49);
+    public void should_return_10_and_11_when_updateQuality_given_Backstage_its_sellIn_is_11_quality_is_10(){
+        Item item = new Item("Backstage passes to a TAFKAL80ETC concert", 11, 10);
         Item[] items = {item};
         GildedRose gildedRose = new GildedRose(items);
         gildedRose.updateQuality();
-        assertEquals(9,item.sellIn);
-        assertEquals(50, item.quality);
+        assertEquals(10,item.sellIn);
+        assertEquals(11, item.quality);
     }
 }
