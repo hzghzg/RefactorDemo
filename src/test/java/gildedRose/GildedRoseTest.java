@@ -6,13 +6,13 @@ import static org.junit.Assert.*;
 
 public class GildedRoseTest {
     @Test
-    public void should_return_14_when_updateQuality_given_small_cake_its_sellIn_is_15_quality_is_15(){
+    public void should_return_14_and_14_when_updateQuality_given_small_cake_its_sellIn_is_15_quality_is_15(){
         Item item = new Item("small cake", 15, 15);
         Item[] items = {item};
         GildedRose gildedRose = new GildedRose(items);
         gildedRose.updateQuality();
-        assertEquals(14, item.quality);
         assertEquals(14,item.sellIn);
+        assertEquals(14, item.quality);
     }
     @Test
     public void should_return_14_and_0_when_updateQuality_given_small_cake_its_sellIn_is_15_quality_is_0(){
@@ -20,25 +20,34 @@ public class GildedRoseTest {
         Item[] items = {item};
         GildedRose gildedRose = new GildedRose(items);
         gildedRose.updateQuality();
-        assertEquals(0, item.quality);
         assertEquals(14,item.sellIn);
+        assertEquals(0, item.quality);
     }
     @Test
-    public void should_return_13_and_minus_1_when_updateQuality_given_small_cake_its_sellIn_is_0_quality_is_15(){
+    public void should_return_minus_1_and_13_when_updateQuality_given_small_cake_its_sellIn_is_0_quality_is_15(){
         Item item = new Item("small cake", 0, 15);
         Item[] items = {item};
         GildedRose gildedRose = new GildedRose(items);
         gildedRose.updateQuality();
-        assertEquals(13, item.quality);
         assertEquals(-1,item.sellIn);
+        assertEquals(13, item.quality);
     }
     @Test
-    public void should_return_0_and_minus_1_when_updateQuality_given_small_cake_its_sellIn_is_0_quality_is_1(){
+    public void should_return_minus_1_and_0_when_updateQuality_given_small_cake_its_sellIn_is_0_quality_is_1(){
         Item item = new Item("small cake", 0, 1);
         Item[] items = {item};
         GildedRose gildedRose = new GildedRose(items);
         gildedRose.updateQuality();
-        assertEquals(0, item.quality);
         assertEquals(-1,item.sellIn);
+        assertEquals(0, item.quality);
+    }
+    @Test
+    public void should_return_minus_1_and_15_when_updateQuality_given_small_cake_its_sellIn_is_minus_1_quality_is_15(){
+        Item item = new Item("Sulfuras, Hand of Ragnaros", -1, 15);
+        Item[] items = {item};
+        GildedRose gildedRose = new GildedRose(items);
+        gildedRose.updateQuality();
+        assertEquals(-1,item.sellIn);
+        assertEquals(15, item.quality);
     }
 }
