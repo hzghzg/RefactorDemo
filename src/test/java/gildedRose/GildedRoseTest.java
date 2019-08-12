@@ -50,4 +50,13 @@ public class GildedRoseTest {
         assertEquals(-1,item.sellIn);
         assertEquals(15, item.quality);
     }
+    @Test
+    public void should_return_1_and_15_when_updateQuality_given_small_cake_its_sellIn_is_1_quality_is_15(){
+        Item item = new Item("Sulfuras, Hand of Ragnaros", 1, 15);
+        Item[] items = {item};
+        GildedRose gildedRose = new GildedRose(items);
+        gildedRose.updateQuality();
+        assertEquals(1,item.sellIn);
+        assertEquals(15, item.quality);
+    }
 }
