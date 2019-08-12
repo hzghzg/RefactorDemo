@@ -167,4 +167,13 @@ public class GildedRoseTest {
         assertEquals(10,item.sellIn);
         assertEquals(11, item.quality);
     }
+    @Test
+    public void should_return_minus_1_and_42_when_updateQuality_given_Backstage_its_sellIn_is_0_quality_is_40(){
+        Item item = new Item("Aged Brie", 0, 40);
+        Item[] items = {item};
+        GildedRose gildedRose = new GildedRose(items);
+        gildedRose.updateQuality();
+        assertEquals(-1,item.sellIn);
+        assertEquals(42, item.quality);
+    }
 }
