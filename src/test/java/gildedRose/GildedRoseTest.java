@@ -32,4 +32,13 @@ public class GildedRoseTest {
         assertEquals(13, item.quality);
         assertEquals(-1,item.sellIn);
     }
+    @Test
+    public void should_return_0_and_minus_1_when_updateQuality_given_small_cake_its_sellIn_is_0_quality_is_1(){
+        Item item = new Item("small cake", 0, 1);
+        Item[] items = {item};
+        GildedRose gildedRose = new GildedRose(items);
+        gildedRose.updateQuality();
+        assertEquals(0, item.quality);
+        assertEquals(-1,item.sellIn);
+    }
 }
