@@ -1,6 +1,6 @@
 package gildedRose;
 
-public class Sulfuras implements ItemStratedy{
+public class Sulfuras implements ItemStrategy {
     @Override
     public void update(Item item) {
     }

@@ -32,7 +32,7 @@ public class Item {
         this.quality = quality;
     }
 
-    private ItemStratedy itemStratedy;
+    private ItemStrategy itemStrategy;
 
     public Item(String name, int sellIn, int quality) {
         this.name = name;
@@ -45,7 +45,7 @@ public class Item {
         return this.name + ", " + this.sellIn + ", " + this.quality;
     }
     void updateQuality() {
-       itemStratedy=ItemStratedyfactory.createItemStratedy(name);
-       itemStratedy.update(this);
+       itemStrategy = ItemStrategyfactory.createItemStrategy(name);
+       itemStrategy.update(this);
     }
 }

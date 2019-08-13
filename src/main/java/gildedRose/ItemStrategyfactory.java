@@ -1,7 +1,7 @@
 package gildedRose;
 
-public class ItemStratedyfactory {
-    public  static ItemStratedy createItemStratedy(String Itemname){
+public class ItemStrategyfactory {
+    public  static ItemStrategy createItemStrategy(String Itemname){
         switch (Itemname) {
             case "Aged Brie":
                 return new AgedBrie();
