@@ -45,20 +45,7 @@ public class Item {
         return this.name + ", " + this.sellIn + ", " + this.quality;
     }
     void updateQuality() {
-        switch (name) {
-            case "Aged Brie":
-                itemStratedy = new AgedBrie();
-                break;
-            case "Backstage passes to a TAFKAL80ETC concert":
-                itemStratedy = new Backstage();
-                break;
-            case "Sulfuras, Hand of Ragnaros":
-                itemStratedy = new Sulfuras();
-                break;
-            default:
-                itemStratedy = new OtherItem();
-                break;
-        }
-        itemStratedy.update(this);
+       itemStratedy=ItemStratedyfactory.createItemStratedy(name);
+       itemStratedy.update(this);
     }
 }
