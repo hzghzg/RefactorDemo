@@ -59,5 +59,6 @@ public class Item {
                 itemStratedy = new OtherItem();
                 break;
         }
+        itemStratedy.update(this);
     }
 }
