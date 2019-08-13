@@ -96,7 +96,7 @@ public class GildedRoseTest {
         assertEquals(0, item.quality);
     }
     @Test
-    public void should_return_minus_1_and_0_when_updateQuality_given_Sulfuras_its_sellIn_is_0_quality_is_40(){
+    public void should_return_minus_1_and_0_when_updateQuality_given_Backstage_its_sellIn_is_0_quality_is_40(){
         Item item = new Item("Backstage passes to a TAFKAL80ETC concert", 0, 40);
         Item[] items = {item};
         GildedRose gildedRose = new GildedRose(items);
@@ -105,7 +105,7 @@ public class GildedRoseTest {
         assertEquals(0, item.quality);
     }
     @Test
-    public void should_return_0_and_43_when_updateQuality_given_Sulfuras_its_sellIn_is_1_quality_is_40(){
+    public void should_return_0_and_43_when_updateQuality_given_Backstage_its_sellIn_is_1_quality_is_40(){
         Item item = new Item("Backstage passes to a TAFKAL80ETC concert", 1, 40);
         Item[] items = {item};
         GildedRose gildedRose = new GildedRose(items);
@@ -114,7 +114,7 @@ public class GildedRoseTest {
         assertEquals(43, item.quality);
     }
     @Test
-    public void should_return_minus_1_and_0_when_updateQuality_given_Sulfuras_its_sellIn_is_0_quality_is_48(){
+    public void should_return_minus_1_and_0_when_updateQuality_given_Backstage_its_sellIn_is_0_quality_is_48(){
         Item item = new Item("Backstage passes to a TAFKAL80ETC concert", 0, 48);
         Item[] items = {item};
         GildedRose gildedRose = new GildedRose(items);
